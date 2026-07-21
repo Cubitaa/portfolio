@@ -3,7 +3,7 @@
     {
       "id": "statistics",
       "order": 1,
-      "enabled": true,
+      "enabled": false,
       "icon": "chart",
       "label": {
         "es": "Estadísticas",
@@ -13,7 +13,7 @@
     {
       "id": "about",
       "order": 2,
-      "enabled": true,
+      "enabled": false,
       "icon": "user",
       "label": {
         "es": "Sobre mí",
