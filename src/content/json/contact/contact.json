@@ -1,0 +1,30 @@
+{
+  "enabled": true,
+  "order": 11,
+  "content": {
+    "es": {
+      "heading": "Contacto",
+      "subheading": "¿Tienes un proyecto en mente? Cuéntamelo.",
+      "nameLabel": "Nombre",
+      "emailLabel": "Email",
+      "messageLabel": "Mensaje",
+      "submitLabel": "Enviar mensaje",
+      "sendingLabel": "Enviando...",
+      "successMessage": "Mensaje enviado. Te responderé lo antes posible.",
+      "errorMessage": "Algo ha fallado al enviar el mensaje. Inténtalo de nuevo o escríbeme directamente al siguiente email:\nrubencuencaibanez1@gmail.com",
+      "validationError": "Revisa los campos: nombre, email válido y un mensaje de al menos 10 caracteres."
+    },
+    "en": {
+      "heading": "Contact",
+      "subheading": "Got a project in mind? Tell me about it.",
+      "nameLabel": "Name",
+      "emailLabel": "Email",
+      "messageLabel": "Message",
+      "submitLabel": "Send message",
+      "sendingLabel": "Sending...",
+      "successMessage": "Message sent. I'll get back to you as soon as possible.",
+      "errorMessage": "Something went wrong while sending your message. Please try again or email me directly.",
+      "validationError": "Check the fields: name, a valid email, and a message of at least 10 characters."
+    }
+  }
+}

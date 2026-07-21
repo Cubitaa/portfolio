@@ -1,0 +1,71 @@
+---
+import "@styles/global.css";
+import SpaceBackground from "@components/background/SpaceBackground";
+import ThemeToggle from "@components/ui/ThemeToggle";
+import LangToggle from "@components/ui/LangToggle.astro";
+import CustomCursor from "@components/ui/CustomCursor";
+import LoadingScreen from "@components/ui/LoadingScreen";
+import MusicPlayer from "@components/ui/MusicPlayer";
+import SeoHead from "@components/seo/SeoHead.astro";
+import { getEntry } from "astro:content";
+import { useTranslations, type Lang } from "@i18n/utils";
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  ogImage?: string;
+}
+
+const { lang, title, description, ogImage } = Astro.props as Props;
+const t = useTranslations(lang);
+
+const musicEntry = await getEntry("music", "music");
+const music = musicEntry!.data;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<!doctype html>
+<html lang={lang} class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SeoHead lang={lang} title={title} description={description} ogImage={ogImage} />
+    <script is:inline>
+      // Se ejecuta antes de pintar para evitar flash de tema incorrecto
+      (function () {
+        // Oscuro por defecto siempre, independientemente de la preferencia
+        // del sistema — solo cambia si el usuario ha elegido claro antes.
+        var stored = localStorage.getItem("portfolio:theme");
+        var mode = stored === "light" ? "light" : "dark";
+        document.documentElement.classList.remove("light", "dark");
+        document.documentElement.classList.add(mode);
+      })();
+    </script>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">{t("skipToContent")}</a>
+
+    <LoadingScreen client:only="react" lang={lang} />
+    <CustomCursor client:load />
+    <SpaceBackground client:load />
+
+    <header class="fixed inset-x-0 top-0 z-30 flex items-center justify-between px-6 py-6 sm:px-12">
+      <a href={lang === "es" ? `${base}/` : `${base}/en`} class="font-display text-sm tracking-widest text-ink-secondary transition-colors hover:text-ink-primary">
+        &lt;/&gt;
+      </a>
+      <div class="flex items-center gap-3">
+        <LangToggle lang={lang} />
+        <ThemeToggle client:load lang={lang} />
+      </div>
+    </header>
+
+    <main id="main-content" class="h-[100dvh] w-full overflow-y-auto">
+      <slot />
+    </main>
+
+    {music.enabled && (
+      <MusicPlayer client:load trackUrl={music.trackUrl} trackTitle={music.trackTitle} defaultVolume={music.defaultVolume} lang={lang} />
+    )}
+  </body>
+</html>

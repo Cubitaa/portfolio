@@ -1,0 +1,30 @@
+{
+  "enabled": true,
+  "order": 8,
+  "content": {
+    "es": {
+      "heading": "Certificaciones",
+      "items": [
+        {
+          "id": "cert-1",
+          "name": "Certificados AWS",
+          "issuer": "2 certificados",
+          "date": "2026",
+          "url": "https://credencial.example.com"
+        }
+      ]
+    },
+    "en": {
+      "heading": "Certifications",
+      "items": [
+        {
+          "id": "cert-1",
+          "name": "Example Certification",
+          "issuer": "Issuing Body",
+          "date": "2024",
+          "url": "https://credential.example.com"
+        }
+      ]
+    }
+  }
+}

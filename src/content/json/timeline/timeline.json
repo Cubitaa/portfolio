@@ -1,0 +1,52 @@
+{
+  "enabled": true,
+  "order": 9,
+  "content": {
+    "es": {
+      "heading": "Timeline",
+      "items": [
+        {
+          "id": "tl-1",
+          "year": "2023-2025",
+          "title": "Bachillerato científico-tecnológico",
+          "description": "Inicié mi formación en un bachillerato científico-tecnológico"
+        },
+        {
+          "id": "tl-2",
+          "year": "2025-2027",
+          "title": "Mis estudios de DAM",
+          "description": "Comencé mi formación en un grado superior de Desarrollo de Aplicaciones Multiplataforma."
+        },
+        {
+          "id": "tl-3",
+          "year": "2026",
+          "title": "Este portafolio",
+          "description": "Construido con Astro, React y una identidad visual propia."
+        }
+      ]
+    },
+    "en": {
+      "heading": "Timeline",
+      "items": [
+        {
+          "id": "tl-1",
+          "year": "2020",
+          "title": "First professional project",
+          "description": "Started my career as a frontend developer."
+        },
+        {
+          "id": "tl-2",
+          "year": "2023",
+          "title": "Senior role",
+          "description": "Took ownership of frontend architecture for a large-scale product."
+        },
+        {
+          "id": "tl-3",
+          "year": "2026",
+          "title": "This portfolio",
+          "description": "Built with Astro, React, and a visual identity of its own."
+        }
+      ]
+    }
+  }
+}

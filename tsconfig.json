@@ -1,0 +1,23 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@content/*": ["src/content/*"],
+      "@i18n/*": ["src/i18n/*"],
+      "@store/*": ["src/store/*"],
+      "@app-types/*": ["src/types/*"],
+      "@styles/*": ["src/styles/*"],
+      "@lib/*": ["src/lib/*"]
+    },
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitOverride": true
+  },
+  "include": ["src/**/*", "astro.config.mjs"]
+}

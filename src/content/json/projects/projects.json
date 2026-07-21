@@ -1,0 +1,94 @@
+{
+  "enabled": true,
+  "order": 5,
+  "content": {
+    "es": {
+      "heading": "Proyectos",
+      "items": [
+        {
+          "id": "proj-1",
+          "name": "Project FrontRooms",
+          "description": "Encargado de todos los sistemas del juego, incluido los sistemas de generación procedural, de movimiento, UIs y diferentes tipos de mecánicas avanzadas.",
+          "technologies": [
+            "Luau"
+          ],
+          "status": "in-progress",
+          "githubUrl": "",
+          "demoUrl": "",
+          "action": {
+            "type": "external",
+            "value": "https://github.com/cubitaa/Project-Frontrooms"
+          }
+        },
+        {
+          "id": "proj-2",
+          "name": "Test",
+          "description": "Test",
+          "technologies": [
+            "Test"
+          ],
+          "status": "live",
+          "action": {
+            "type": "modal"
+          }
+        },
+        {
+          "id": "proj-3",
+          "name": "Prototipo de exploración",
+          "description": "Experimento visual sin despliegue público.",
+          "technologies": [
+            "Three.js"
+          ],
+          "status": "concept",
+          "action": {
+            "type": "none"
+          }
+        }
+      ]
+    },
+    "en": {
+      "heading": "Projects",
+      "items": [
+        {
+          "id": "proj-1",
+          "name": "Project FrontRooms",
+          "description": "Responsible for all game systems, including procedural generation, movement, UIs, and various types of advanced mechanics.",
+          "technologies": [
+            "Luau"
+          ],
+          "status": "in-progress",
+          "githubUrl": "",
+          "demoUrl": "",
+          "action": {
+            "type": "external",
+            "value": "https://github.com/cubitaa/Project-Frontrooms"
+          }
+        },
+        {
+          "id": "proj-2",
+          "name": "Test",
+          "description": "Test",
+          "technologies": [
+            "Test"
+          ],
+          "status": "live",
+          "action": {
+            "type": "modal"
+          }
+        },
+        {
+          "id": "proj-3",
+          "name": "Exploration Prototype",
+          "description": "Visual experiment with no public deployment.",
+          "technologies": [
+            "Three.js"
+          ],
+          "status": "concept",
+          "action": {
+            "type": "none"
+          }
+        }
+      ]
+    }
+  }
+}

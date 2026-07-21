@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "order": 3,
+  "content": {
+    "es": {
+      "heading": "Experiencia",
+      "items": []
+    },
+    "en": {
+      "heading": "Experience",
+      "items": []
+    }
+  }
+}

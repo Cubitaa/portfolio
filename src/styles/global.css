@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+
+/* Modo oscuro — "deep void" — es el tema por defecto porque es el que mejor
+   representa el universo profundo pedido en el brief */
+:root,
+:root.dark {
+  --color-void: 5 6 15;
+  --color-surface: 13 14 26;
+  --color-nebula-violet: 107 79 224;
+  --color-nebula-cyan: 63 217 199;
+  --color-nebula-amber: 242 166 90;
+  --color-text-primary: 245 243 255;
+  --color-text-secondary: 139 135 168;
+  --color-text-muted: 90 87 112;
+}
+
+/* Modo claro — "dawn nebula" — no es una inversión del oscuro, es su propio
+   concepto: cielo de amanecer con lavados de nebulosa suaves. Se evita el
+   blanco puro (demasiado plano/deslumbrante) a favor de un gris-lavanda
+   apagado, más cómodo para leer y más coherente con el tema espacial. */
+:root.light {
+  --color-void: 130 144 178;
+  --color-surface: 152 164 198;
+  /* Colores de acento (nodos, "Sobre mí", rol del hero…) iguales al modo
+     oscuro a propósito — solo cambian fondo/texto entre temas. */
+  --color-nebula-violet: 107 79 224;
+  --color-nebula-cyan: 63 217 199;
+  --color-nebula-amber: 242 166 90;
+  --color-text-primary: 23 20 36;
+  --color-text-secondary: 73 68 100;
+  --color-text-muted: 122 116 150;
+}
+
+html {
+  scroll-behavior: auto;
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+}
+
+body {
+  background-color: rgb(var(--color-void));
+  color: rgb(var(--color-text-primary));
+  font-family: "Manrope", sans-serif;
+  overflow: hidden;
+  height: 100dvh;
+  width: 100vw;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--color-nebula-cyan));
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.has-custom-cursor,
+.has-custom-cursor * {
+  cursor: none !important;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 100;
+  background: rgb(var(--color-nebula-violet));
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 16px;
+}

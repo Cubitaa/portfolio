@@ -1,0 +1,84 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import MainScreen from "@components/main/MainScreen";
+import { getEntry } from "astro:content";
+import { useTranslations } from "@i18n/utils";
+import type { NavNodeData, NodeSectionId, PanelSectionsData, FooterBarData } from "@app-types/main";
+
+const lang = "en" as const;
+const t = useTranslations(lang);
+
+const [
+  heroEntry,
+  navEntry,
+  aboutEntry,
+  experienceEntry,
+  educationEntry,
+  projectsEntry,
+  skillsEntry,
+  certificationsEntry,
+  timelineEntry,
+  statisticsEntry,
+  contactEntry,
+  footerEntry,
+  socialsEntry,
+] = await Promise.all([
+  getEntry("hero", "hero"),
+  getEntry("navigation", "navigation"),
+  getEntry("about", "about"),
+  getEntry("experience", "experience"),
+  getEntry("education", "education"),
+  getEntry("projects", "projects"),
+  getEntry("skills", "skills"),
+  getEntry("certifications", "certifications"),
+  getEntry("timeline", "timeline"),
+  getEntry("statistics", "statistics"),
+  getEntry("contact", "contact"),
+  getEntry("footer", "footer"),
+  getEntry("socials", "socials"),
+]);
+
+const hero = { ...heroEntry!.data.content[lang], available: heroEntry!.data.available };
+
+const itemCounts: Partial<Record<NodeSectionId, number>> = {
+  experience: experienceEntry!.data.content[lang].items.length,
+  education: educationEntry!.data.content[lang].items.length,
+  projects: projectsEntry!.data.content[lang].items.length,
+  certifications: certificationsEntry!.data.content[lang].items.length,
+};
+
+const navItems: NavNodeData[] = navEntry!.data.items
+  .filter((item) => item.enabled)
+  .sort((a, b) => a.order - b.order)
+  .map((item) => ({
+    id: item.id as NodeSectionId,
+    order: item.order,
+    label: item.label[lang],
+    itemCount: itemCounts[item.id as NodeSectionId],
+  }));
+
+const panelData: PanelSectionsData = {
+  about: aboutEntry!.data.content[lang],
+  experience: { ...experienceEntry!.data.content[lang], presentLabel: t("experience.present") },
+  education: educationEntry!.data.content[lang],
+  projects: projectsEntry!.data.content[lang],
+  skills: skillsEntry!.data.content[lang],
+  certifications: certificationsEntry!.data.content[lang],
+  timeline: timelineEntry!.data.content[lang],
+  statistics: statisticsEntry!.data.content[lang],
+  contact: contactEntry!.data.content[lang],
+};
+
+const footer: FooterBarData = {
+  copyrightText: footerEntry!.data.content[lang].copyrightText,
+  socials: socialsEntry!.data.items,
+};
+---
+
+<BaseLayout
+  lang={lang}
+  title="Ruben Cuenca — Software and Application Developer"
+  description="Portfolio of Ruben Cuenca: software and application developer specialized in high-quality digital experiences."
+>
+  <MainScreen client:load hero={hero} navItems={navItems} panelData={panelData} footer={footer} lang={lang} />
+</BaseLayout>

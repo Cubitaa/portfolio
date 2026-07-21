@@ -1,0 +1,92 @@
+{
+  "enabled": true,
+  "order": 2,
+  "content": {
+    "es": {
+      "heading": "Sobre mí",
+      "paragraphs": [
+        "Diseño y construyo productos digitales con foco en arquitectura escalable y experiencias de usuario memorables.",
+        "Me interesa especialmente el espacio entre la ingeniería y el diseño: ese punto donde una decisión técnica se convierte en una sensación para quien usa el producto."
+      ],
+      "highlights": [
+        {
+          "label": "Años de experiencia",
+          "value": "0"
+        },
+        {
+          "label": "Proyectos entregados",
+          "value": "2"
+        },
+        {
+          "label": "Stack principal",
+          "value": "Luau · JavaScript "
+        },
+        {
+          "label": "Ubicación",
+          "value": "Casarrubuelos, Madrid"
+        },
+        {
+          "label": "Proyecto principal",
+          "value": "Project FrontRooms"
+        }
+      ],
+      "languagesHeading": "Idiomas",
+      "languages": [
+        {
+          "flag": "es",
+          "language": "Español",
+          "level": "Nativo"
+        },
+        {
+          "flag": "us",
+          "language": "Inglés",
+          "level": "B2"
+        }
+      ],
+      "extraSections": []
+    },
+    "en": {
+      "heading": "About me",
+      "paragraphs": [
+        "I design and build digital products with a focus on scalable architecture and memorable user experiences.",
+        "I'm especially interested in the space between engineering and design: the point where a technical decision becomes a feeling for the person using the product."
+      ],
+      "highlights": [
+        {
+          "label": "Years of experience",
+          "value": "0"
+        },
+        {
+          "label": "Shipped projects",
+          "value": "2"
+        },
+        {
+          "label": "Core stack",
+          "value": "Luau · JavaScript"
+        },
+        {
+          "label": "Location",
+          "value": "Casarrubuelos, Madrid"
+        },
+        {
+          "label": "Main project",
+          "value": "Project FrontRooms"
+        }
+      ],
+      "languagesHeading": "Languages",
+      "languages": [
+        {
+          "flag": "es",
+          "language": "Spanish",
+          "level": "Native"
+        },
+        {
+          "flag": "us",
+          "language": "English",
+          "level": "B2"
+        }
+      ],
+      "extraSections": []
+    }
+  }
+}

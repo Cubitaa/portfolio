@@ -1,0 +1,23 @@
+{
+  "enabled": true,
+  "order": 1,
+  "available": true,
+  "content": {
+    "es": {
+      "greeting": "",
+      "name": "Rubén Cuenca",
+      "role": "Desarrollador Full-Stack · Software Architect",
+      "tagline": "",
+      "ctaLabel": "",
+      "availabilityLabel": "Disponibilidad inmediata"
+    },
+    "en": {
+      "greeting": "",
+      "name": "Ruben Cuenca",
+      "role": "Full-Stack Developer · Software Architect",
+      "tagline": "",
+      "ctaLabel": "",
+      "availabilityLabel": "Available now"
+    }
+  }
+}

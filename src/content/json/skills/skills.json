@@ -1,0 +1,125 @@
+{
+  "enabled": true,
+  "order": 7,
+  "content": {
+    "es": {
+      "heading": "Competencias",
+      "categories": [
+        {
+          "id": "frontend",
+          "label": "Frontend",
+          "items": [
+            "HTML",
+            "CSS",
+            "XML",
+            "TypeScript",
+            "Tailwind CSS"
+          ]
+        },
+        {
+          "id": "backend",
+          "label": "Backend",
+          "items": [
+            "Java",
+            "Lua",
+            "Luau",
+            "Node.js"
+          ]
+        },
+        {
+          "id": "databases",
+          "label": "Bases de datos",
+          "items": [
+            "MySQL",
+            "SQL Developer"
+          ]
+        },
+        {
+          "id": "infra",
+          "label": "Infraestructuras",
+          "items": [
+            "VirtualBox",
+            "Docker Desktop"
+          ]
+        },
+        {
+          "id": "ai",
+          "label": "IA & Agentes",
+          "items": [
+            "Anthropic API"
+          ]
+        },
+        {
+          "id": "tools",
+          "label": "Herramientas",
+          "items": [
+            "Android Studio",
+            "Roblox Studio",
+            "Visual Studio Code",
+            "IntelliJ"
+          ]
+        }
+      ]
+    },
+    "en": {
+      "heading": "Competencies",
+      "categories": [
+        {
+          "id": "frontend",
+          "label": "Frontend",
+          "items": [
+            "HTML",
+            "CSS",
+            "XML",
+            "Astro",
+            "TypeScript",
+            "Tailwind CSS"
+          ]
+        },
+        {
+          "id": "backend",
+          "label": "Backend",
+          "items": [
+            "Java",
+            "Lua",
+            "Luau",
+            "Node.js"
+          ]
+        },
+        {
+          "id": "databases",
+          "label": "Databases",
+          "items": [
+            "MySQL",
+            "SQL Developer"
+          ]
+        },
+        {
+          "id": "infra",
+          "label": "Infrastructure",
+          "items": [
+            "VirtualBox",
+            "Docker Desktop"
+          ]
+        },
+        {
+          "id": "ai",
+          "label": "AI & Agents",
+          "items": [
+            "Anthropic API"
+          ]
+        },
+        {
+          "id": "tools",
+          "label": "Tools",
+          "items": [
+            "Android Studio",
+            "Roblox Studio",
+            "Visual Studio Code",
+            "IntelliJ"
+          ]
+        }
+      ]
+    }
+  }
+}

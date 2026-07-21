@@ -1,0 +1,46 @@
+---
+import "@styles/global.css";
+import SpaceBackground from "@components/background/SpaceBackground";
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 — Page not found</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+    <script is:inline>
+      (function () {
+        var stored = localStorage.getItem("portfolio:theme");
+        var mode = stored === "light" || stored === "dark"
+          ? stored
+          : window.matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark";
+        document.documentElement.classList.remove("light", "dark");
+        document.documentElement.classList.add(mode);
+      })();
+    </script>
+  </head>
+  <body class="h-[100dvh] overflow-hidden">
+    <SpaceBackground client:load />
+    <main class="relative flex h-full w-full flex-col items-center justify-center gap-4 px-6 text-center">
+      <p class="font-mono text-xs uppercase tracking-[0.3em] text-nebula-cyan">Coordinates lost</p>
+      <h1 class="font-display text-7xl font-bold text-ink-primary sm:text-8xl">404</h1>
+      <p class="max-w-md text-ink-secondary">
+        There's nothing in this region of space. The link might be broken, or the page may have moved.
+      </p>
+      <a
+        href={`${base}/en`}
+        class="group mt-4 flex items-center gap-3 rounded-full border border-nebula-violet/40 bg-surface/40 px-6 py-3 font-mono text-sm uppercase tracking-widest text-ink-primary backdrop-blur-md transition-all duration-300 hover:border-nebula-cyan/60 hover:bg-surface/60 focus-visible:outline-nebula-cyan"
+      >
+        Back to home
+        <span class="inline-block h-2 w-2 rounded-full bg-nebula-cyan transition-transform duration-500 group-hover:scale-150" aria-hidden="true"></span>
+      </a>
+    </main>
+  </body>
+</html>

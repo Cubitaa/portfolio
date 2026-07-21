@@ -1,0 +1,48 @@
+{
+  "enabled": true,
+  "order": 4,
+  "content": {
+    "es": {
+      "heading": "Formación",
+      "items": [
+        {
+          "id": "edu-1",
+          "institution": "FP euroformac - Barajas",
+          "degree": "Grado Superior de Desarrollo de Aplicaciones Multiplataforma",
+          "startYear": "2025",
+          "endYear": "2027",
+          "description": "Especialización en desarrollo de software y aplicaciones multiplataforma."
+        },
+        {
+          "id": "edu-2",
+          "institution": "Colegio El Catón",
+          "degree": "Bachillerato Científico-Tecnológico",
+          "startYear": "2023",
+          "endYear": "2025",
+          "description": "Buenas calificaciones en asignaturas de ciencias como matemáticas, física o tecnología."
+        }
+      ]
+    },
+    "en": {
+      "heading": "Education",
+      "items": [
+        {
+          "id": "edu-1",
+          "institution": "FP euroformac - Barajas",
+          "degree": "Higher Diploma in Multiplatform Application Development",
+          "startYear": "2025",
+          "endYear": "2027",
+          "description": "Specialization in software and cross-platform application development."
+        },
+        {
+          "id": "edu-2",
+          "institution": "Colegio El Catón",
+          "degree": "Bachillerato Científico-Tecnológico",
+          "startYear": "2023",
+          "endYear": "2025",
+          "description": "Good grades in science subjects such as mathematics, physics, or technology."
+        }
+      ]
+    }
+  }
+}

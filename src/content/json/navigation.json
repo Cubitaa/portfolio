@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "id": "statistics",
+      "order": 1,
+      "enabled": false,
+      "icon": "chart",
+      "label": {
+        "es": "Estadísticas",
+        "en": "Statistics"
+      }
+    },
+    {
+      "id": "about",
+      "order": 2,
+      "enabled": false,
+      "icon": "user",
+      "label": {
+        "es": "Sobre mí",
+        "en": "About"
+      }
+    },
+    {
+      "id": "experience",
+      "order": 3,
+      "enabled": true,
+      "icon": "briefcase",
+      "label": {
+        "es": "Experiencia",
+        "en": "Experience"
+      }
+    },
+    {
+      "id": "education",
+      "order": 4,
+      "enabled": true,
+      "icon": "school",
+      "label": {
+        "es": "Formación",
+        "en": "Education"
+      }
+    },
+    {
+      "id": "projects",
+      "order": 5,
+      "enabled": true,
+      "icon": "code",
+      "label": {
+        "es": "Proyectos",
+        "en": "Projects"
+      }
+    },
+    {
+      "id": "skills",
+      "order": 6,
+      "enabled": true,
+      "icon": "bolt",
+      "label": {
+        "es": "Competencias",
+        "en": "Competencies"
+      }
+    },
+    {
+      "id": "certifications",
+      "order": 7,
+      "enabled": true,
+      "icon": "certificate",
+      "label": {
+        "es": "Certificaciones",
+        "en": "Certifications"
+      }
+    },
+    {
+      "id": "timeline",
+      "order": 8,
+      "enabled": true,
+      "icon": "timeline",
+      "label": {
+        "es": "Timeline",
+        "en": "Timeline"
+      }
+    },
+    {
+      "id": "contact",
+      "order": 9,
+      "enabled": true,
+      "icon": "mail",
+      "label": {
+        "es": "Contacto",
+        "en": "Contact"
+      }
+    }
+  ]
+}

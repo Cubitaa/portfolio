@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "trackUrl": "/audio/ambient.mp3",
+  "trackTitle": "Tema principal (sustituye este archivo por tu pista)",
+  "defaultVolume": 0.35
+}

@@ -1,0 +1,24 @@
+{
+  "enabled": true,
+  "order": 1,
+  "content": {
+    "es": {
+      "heading": "Estadísticas",
+      "items": [
+        { "id": "stat-1", "label": "Años de experiencia", "value": 8, "suffix": "+" },
+        { "id": "stat-2", "label": "Proyectos entregados", "value": 40, "suffix": "+" },
+        { "id": "stat-3", "label": "Clientes satisfechos", "value": 25, "suffix": "+" },
+        { "id": "stat-4", "label": "Tazas de café", "value": 9999, "suffix": "+" }
+      ]
+    },
+    "en": {
+      "heading": "Statistics",
+      "items": [
+        { "id": "stat-1", "label": "Years of experience", "value": 8, "suffix": "+" },
+        { "id": "stat-2", "label": "Shipped projects", "value": 40, "suffix": "+" },
+        { "id": "stat-3", "label": "Happy clients", "value": 25, "suffix": "+" },
+        { "id": "stat-4", "label": "Cups of coffee", "value": 9999, "suffix": "+" }
+      ]
+    }
+  }
+}

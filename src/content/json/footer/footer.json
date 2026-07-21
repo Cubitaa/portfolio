@@ -1,0 +1,14 @@
+{
+  "enabled": true,
+  "order": 12,
+  "content": {
+    "es": {
+      "copyrightText": "",
+      "backHomeLabel": "Volver al inicio"
+    },
+    "en": {
+      "copyrightText": "",
+      "backHomeLabel": "Back to home"
+    }
+  }
+}
