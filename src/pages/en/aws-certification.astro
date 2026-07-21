@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import AwsCertificationPage from "@components/aws/AwsCertificationPage";
+import { getEntry } from "astro:content";
+
+const lang = "en" as const;
+const entry = await getEntry("awsCertification", "aws-certification");
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+---
+
+<BaseLayout
+  lang={lang}
+  title="AWS Certifications — Ruben Cuenca"
+  description="Status of my AWS certifications: which ones I have and which ones are next."
+>
+  <AwsCertificationPage client:load lang={lang} data={entry!.data} backHref={`${base}/en`} />
+</BaseLayout>

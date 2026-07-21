@@ -20,6 +20,7 @@ const SECTIONS = [
   { id: "statistics", label: "Estadísticas", group: "Contenido", file: path.join(JSON_ROOT, "statistics", "statistics.json") },
   { id: "contact", label: "Contacto", group: "Contenido", file: path.join(JSON_ROOT, "contact", "contact.json") },
   { id: "footer", label: "Footer", group: "Contenido", file: path.join(JSON_ROOT, "footer", "footer.json") },
+  { id: "aws-certification", label: "Certificaciones AWS", group: "Contenido", file: path.join(JSON_ROOT, "aws-certification.json") },
   { id: "navigation", label: "Navegación", group: "Configuración", file: path.join(JSON_ROOT, "navigation.json") },
   { id: "theme", label: "Tema", group: "Configuración", file: path.join(JSON_ROOT, "theme.json") },
   { id: "socials", label: "Redes sociales", group: "Configuración", file: path.join(JSON_ROOT, "socials.json") },

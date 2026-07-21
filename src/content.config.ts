@@ -202,6 +202,27 @@ const contactSchema = sectionBase.extend({
   }),
 });
 
+/* ---------- AWS Certification page (standalone, not part of the node menu) ---------- */
+const awsCertLevel = z.enum(["foundational", "associate", "professional", "specialty"]);
+const awsCertItem = z.object({
+  id: z.string(),
+  level: awsCertLevel,
+  name: localizedText,
+  obtained: z.boolean(),
+});
+const awsCertificationSchema = z.object({
+  heading: localizedText,
+  progressLabel: localizedText,
+  backLabel: localizedText,
+  levelLabels: z.object({
+    foundational: localizedText,
+    associate: localizedText,
+    professional: localizedText,
+    specialty: localizedText,
+  }),
+  items: z.array(awsCertItem),
+});
+
 /* ---------- Socials ---------- */
 const socialItem = z.object({
   id: z.string(),
@@ -277,4 +298,5 @@ export const collections = {
   music: jsonCollection("music.json", "./src/content/json", musicSchema),
   navigation: jsonCollection("navigation.json", "./src/content/json", navigationSchema),
   theme: jsonCollection("theme.json", "./src/content/json", themeSchema),
+  awsCertification: jsonCollection("aws-certification.json", "./src/content/json", awsCertificationSchema),
 };
