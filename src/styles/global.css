@@ -4,10 +4,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
 
-/* Modo oscuro — "deep void" — es el tema por defecto porque es el que mejor
-   representa el universo profundo pedido en el brief */
-:root,
-:root.dark {
+/* Único tema: "deep void" — universo profundo, siempre oscuro */
+:root {
   --color-void: 5 6 15;
   --color-surface: 13 14 26;
   --color-nebula-violet: 107 79 224;
@@ -18,30 +16,9 @@
   --color-text-muted: 90 87 112;
 }
 
-/* Modo claro — "dawn nebula" — no es una inversión del oscuro, es su propio
-   concepto: cielo de amanecer con lavados de nebulosa suaves. Se evita el
-   blanco puro (demasiado plano/deslumbrante) a favor de un gris-lavanda
-   apagado, más cómodo para leer y más coherente con el tema espacial. */
-:root.light {
-  --color-void: 130 144 178;
-  --color-surface: 152 164 198;
-  /* Colores de acento (nodos, "Sobre mí", rol del hero…) iguales al modo
-     oscuro a propósito — solo cambian fondo/texto entre temas. */
-  --color-nebula-violet: 107 79 224;
-  --color-nebula-cyan: 63 217 199;
-  --color-nebula-amber: 242 166 90;
-  --color-text-primary: 23 20 36;
-  --color-text-secondary: 73 68 100;
-  --color-text-muted: 122 116 150;
-}
-
 html {
   scroll-behavior: auto;
   color-scheme: dark;
-}
-
-html.light {
-  color-scheme: light;
 }
 
 body {

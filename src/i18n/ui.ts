@@ -11,8 +11,6 @@ export const ui = {
   es: {
     "nav.open": "Abrir navegación",
     "nav.close": "Cerrar navegación",
-    "theme.toggleToLight": "Cambiar a modo claro",
-    "theme.toggleToDark": "Cambiar a modo oscuro",
     "lang.switch": "Switch to English",
     "experience.present": "Actualidad",
     "loading": "Cargando",
@@ -21,8 +19,6 @@ export const ui = {
   en: {
     "nav.open": "Open navigation",
     "nav.close": "Close navigation",
-    "theme.toggleToLight": "Switch to light mode",
-    "theme.toggleToDark": "Switch to dark mode",
     "lang.switch": "Cambiar a Español",
     "experience.present": "Present",
     "loading": "Loading",

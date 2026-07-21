@@ -225,24 +225,41 @@ export function SkillsPanel({ categories }: { categories: SkillCategory[] }) {
   );
 }
 
+function isSameOriginUrl(url: string): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    return new URL(url, window.location.href).origin === window.location.origin;
+  } catch {
+    return false;
+  }
+}
+
 export function CertificationsPanel({ items, lang }: { items: CertificationItem[]; lang: Lang }) {
   return (
     <ul className="space-y-2.5">
-      {items.map((cert) => (
-        <li key={cert.id} className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-nebula-violet/20 bg-surface/40 px-4 py-3">
-          <div>
-            <p className="font-display text-sm font-semibold text-ink-primary">{cert.name}</p>
-            <p className="text-xs text-ink-secondary">
-              {cert.issuer} · {cert.date}
-            </p>
-          </div>
-          {cert.url && (
-            <a href={cert.url} target="_blank" rel="noopener noreferrer" className="font-mono text-[11px] uppercase tracking-widest text-nebula-cyan hover:text-ink-primary">
-              {lang === "es" ? "Ver" : "View"}
-            </a>
-          )}
-        </li>
-      ))}
+      {items.map((cert) => {
+        const internal = cert.url ? isSameOriginUrl(cert.url) : false;
+        return (
+          <li key={cert.id} className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-nebula-violet/20 bg-surface/40 px-4 py-3">
+            <div>
+              <p className="font-display text-sm font-semibold text-ink-primary">{cert.name}</p>
+              <p className="text-xs text-ink-secondary">
+                {cert.issuer} · {cert.date}
+              </p>
+            </div>
+            {cert.url && (
+              <a
+                href={cert.url}
+                target={internal ? undefined : "_blank"}
+                rel={internal ? undefined : "noopener noreferrer"}
+                className="font-mono text-[11px] uppercase tracking-widest text-nebula-cyan hover:text-ink-primary"
+              >
+                {lang === "es" ? "Ver" : "View"}
+              </a>
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 }

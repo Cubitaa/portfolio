@@ -12,6 +12,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   lang={lang}
   title="Certificaciones AWS — Ruben Cuenca"
   description="Estado de mis certificaciones de AWS: cuáles tengo y cuáles me faltan."
+  showLoadingScreen={false}
 >
   <AwsCertificationPage client:load lang={lang} data={entry!.data} backHref={`${base}/`} />
 </BaseLayout>

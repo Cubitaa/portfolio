@@ -1,22 +1,26 @@
 import { motion } from "framer-motion";
 import type { Lang } from "@i18n/utils";
+import { getCertIcon } from "./certIcons";
 
 type CertLevel = "foundational" | "associate" | "professional" | "specialty";
 const LEVEL_ORDER: CertLevel[] = ["foundational", "associate", "professional", "specialty"];
 const HEX_PER_ROW = 3;
+const HEX_CLIP = "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)";
 
 interface AwsCertItem {
   id: string;
   level: CertLevel;
   name: { es: string; en: string };
   obtained: boolean;
+  badgeImage?: string;
 }
 
 interface AwsCertData {
   heading: { es: string; en: string };
   progressLabel: { es: string; en: string };
   backLabel: { es: string; en: string };
-  levelLabels: Record<CertLevel, { es: string; en: string }>;
+  // Nombres de nivel oficiales de AWS: no se traducen.
+  levelLabels: Record<CertLevel, string>;
   items: AwsCertItem[];
 }
 
@@ -33,34 +37,43 @@ function chunk<T>(items: T[], size: number): T[][] {
 }
 
 function Hex({ item, lang }: { item: AwsCertItem; lang: Lang }) {
+  const label = item.name[lang];
+  const dimClasses = item.obtained ? "opacity-100" : "opacity-40 grayscale";
+  const Icon = getCertIcon(item.id);
+
   return (
-    <div className="flex w-[110px] flex-col items-center gap-2 sm:w-[130px]">
-      <div
-        className={`relative flex aspect-[0.866/1] w-full items-center justify-center transition-all duration-500 ${
-          item.obtained ? "opacity-100" : "opacity-40 grayscale"
-        }`}
-        style={{
-          clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
-        }}
-      >
-        <div
-          className={`absolute inset-0 ${
-            item.obtained
-              ? "bg-gradient-to-br from-nebula-violet to-nebula-cyan"
-              : "border border-ink-muted/30 bg-surface/40"
-          }`}
-          style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
-        />
-        {item.obtained && (
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="relative h-8 w-8" aria-hidden="true">
-            <path d="M20 6 9 17l-5-5" />
-          </svg>
-        )}
-      </div>
-      <span
-        className={`text-center text-[11px] leading-tight ${item.obtained ? "text-ink-primary" : "text-ink-secondary/60"}`}
-      >
-        {item.name[lang]}
+    <div className="flex w-[130px] flex-col items-center gap-4 sm:w-[150px]">
+      {item.badgeImage ? (
+        <img src={item.badgeImage} alt={label} className={`w-full transition-all duration-500 ${dimClasses}`} />
+      ) : (
+        <div className={`relative flex aspect-[0.866/1] w-full items-center justify-center transition-all duration-500 ${dimClasses}`}>
+          <div
+            className={`absolute inset-0 ${
+              item.obtained ? "bg-gradient-to-br from-nebula-violet to-nebula-cyan" : "border border-ink-muted/30 bg-surface/40"
+            }`}
+            style={{ clipPath: HEX_CLIP }}
+          />
+          <div className={`relative h-9 w-9 ${item.obtained ? "text-white" : "text-ink-secondary"}`}>
+            <Icon />
+          </div>
+          {item.obtained && (
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="absolute -bottom-1 -right-1 h-6 w-6 rounded-full bg-nebula-cyan p-1 text-void ring-2 ring-void"
+              aria-hidden="true"
+            >
+              <path d="M20 6 9 17l-5-5" />
+            </svg>
+          )}
+        </div>
+      )}
+      <span className={`max-w-[140px] text-center text-[11px] leading-snug ${item.obtained ? "text-ink-primary" : "text-ink-secondary/60"}`}>
+        {label}
       </span>
     </div>
   );
@@ -69,15 +82,12 @@ function Hex({ item, lang }: { item: AwsCertItem; lang: Lang }) {
 function HexGrid({ items, lang }: { items: AwsCertItem[]; lang: Lang }) {
   const rows = chunk(items, HEX_PER_ROW);
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center gap-10 sm:gap-12">
       {rows.map((row, i) => (
         <div
           key={i}
-          className="flex flex-wrap justify-center gap-x-4 gap-y-6 sm:gap-x-6"
-          style={{
-            marginTop: i === 0 ? 0 : "-1.25rem",
-            transform: i % 2 === 1 && row.length > 1 ? "translateX(2.5rem)" : undefined,
-          }}
+          className="flex flex-wrap justify-center gap-x-6 gap-y-10 sm:gap-x-8"
+          style={{ transform: i % 2 === 1 && row.length > 1 ? "translateX(3rem)" : undefined }}
         >
           {row.map((item) => (
             <Hex key={item.id} item={item} lang={lang} />
@@ -116,16 +126,16 @@ export default function AwsCertificationPage({ lang, data, backHref }: Props) {
         </p>
       </div>
 
-      <div className="mt-16 flex w-full flex-col gap-16">
+      <div className="mt-16 flex w-full flex-col gap-20">
         {LEVEL_ORDER.map((level) => {
           const items = data.items.filter((item) => item.level === level);
           if (items.length === 0) return null;
           return (
-            <section key={level} className="flex flex-col items-center gap-8">
+            <section key={level} className="flex flex-col items-center gap-10">
               <div className="flex items-center gap-4">
                 <span className="h-px w-10 bg-nebula-violet/30" aria-hidden="true" />
                 <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-nebula-cyan">
-                  {data.levelLabels[level][lang]}
+                  {data.levelLabels[level]}
                 </h2>
                 <span className="h-px w-10 bg-nebula-violet/30" aria-hidden="true" />
               </div>

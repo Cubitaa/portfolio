@@ -209,16 +209,22 @@ const awsCertItem = z.object({
   level: awsCertLevel,
   name: localizedText,
   obtained: z.boolean(),
+  // Insignia oficial de AWS (PNG hexagonal con fondo transparente) — el
+  // usuario la coloca en public/aws-badges/ y pone la ruta aquí; sin
+  // valor, se muestra un hexágono de relleno como marcador de posición.
+  badgeImage: z.string().optional(),
 });
 const awsCertificationSchema = z.object({
   heading: localizedText,
   progressLabel: localizedText,
   backLabel: localizedText,
+  // Los nombres de nivel de AWS (Foundational/Associate/...) son nombres
+  // oficiales y no se traducen, ni siquiera en la versión en español.
   levelLabels: z.object({
-    foundational: localizedText,
-    associate: localizedText,
-    professional: localizedText,
-    specialty: localizedText,
+    foundational: z.string(),
+    associate: z.string(),
+    professional: z.string(),
+    specialty: z.string(),
   }),
   items: z.array(awsCertItem),
 });
@@ -240,7 +246,6 @@ const seoSchema = z.object({
   twitterHandle: z.string().optional(),
   defaultOgImage: z.string(),
   themeColorDark: z.string(),
-  themeColorLight: z.string(),
 });
 
 /* ---------- Music ---------- */
@@ -259,7 +264,7 @@ const footerSchema = sectionBase.extend({
   }),
 });
 
-/* ---------- Navigation / Theme ---------- */
+/* ---------- Navigation ---------- */
 const navigationSchema = z.object({
   items: z.array(
     z.object({
@@ -270,11 +275,6 @@ const navigationSchema = z.object({
       icon: z.string(),
     }),
   ),
-});
-
-const themeSchema = z.object({
-  defaultMode: z.enum(["light", "dark"]),
-  allowUserToggle: z.boolean(),
 });
 
 function jsonCollection<T extends z.ZodTypeAny>(pattern: string, base: string, schema: T) {
@@ -297,6 +297,5 @@ export const collections = {
   seo: jsonCollection("seo.json", "./src/content/json", seoSchema),
   music: jsonCollection("music.json", "./src/content/json", musicSchema),
   navigation: jsonCollection("navigation.json", "./src/content/json", navigationSchema),
-  theme: jsonCollection("theme.json", "./src/content/json", themeSchema),
   awsCertification: jsonCollection("aws-certification.json", "./src/content/json", awsCertificationSchema),
 };

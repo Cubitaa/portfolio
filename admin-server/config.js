@@ -22,7 +22,6 @@ const SECTIONS = [
   { id: "footer", label: "Footer", group: "Contenido", file: path.join(JSON_ROOT, "footer", "footer.json") },
   { id: "aws-certification", label: "Certificaciones AWS", group: "Contenido", file: path.join(JSON_ROOT, "aws-certification.json") },
   { id: "navigation", label: "Navegación", group: "Configuración", file: path.join(JSON_ROOT, "navigation.json") },
-  { id: "theme", label: "Tema", group: "Configuración", file: path.join(JSON_ROOT, "theme.json") },
   { id: "socials", label: "Redes sociales", group: "Configuración", file: path.join(JSON_ROOT, "socials.json") },
   { id: "seo", label: "SEO", group: "Configuración", file: path.join(JSON_ROOT, "seo.json") },
   { id: "music", label: "Música", group: "Configuración", file: path.join(JSON_ROOT, "music.json") },

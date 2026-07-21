@@ -1,7 +1,6 @@
 ---
 import "@styles/global.css";
 import SpaceBackground from "@components/background/SpaceBackground";
-import ThemeToggle from "@components/ui/ThemeToggle";
 import LangToggle from "@components/ui/LangToggle.astro";
 import CustomCursor from "@components/ui/CustomCursor";
 import LoadingScreen from "@components/ui/LoadingScreen";
@@ -15,9 +14,10 @@ interface Props {
   title: string;
   description: string;
   ogImage?: string;
+  showLoadingScreen?: boolean;
 }
 
-const { lang, title, description, ogImage } = Astro.props as Props;
+const { lang, title, description, ogImage, showLoadingScreen = true } = Astro.props as Props;
 const t = useTranslations(lang);
 
 const musicEntry = await getEntry("music", "music");
@@ -31,22 +31,11 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <SeoHead lang={lang} title={title} description={description} ogImage={ogImage} />
-    <script is:inline>
-      // Se ejecuta antes de pintar para evitar flash de tema incorrecto
-      (function () {
-        // Oscuro por defecto siempre, independientemente de la preferencia
-        // del sistema — solo cambia si el usuario ha elegido claro antes.
-        var stored = localStorage.getItem("portfolio:theme");
-        var mode = stored === "light" ? "light" : "dark";
-        document.documentElement.classList.remove("light", "dark");
-        document.documentElement.classList.add(mode);
-      })();
-    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">{t("skipToContent")}</a>
 
-    <LoadingScreen client:only="react" lang={lang} />
+    {showLoadingScreen && <LoadingScreen client:only="react" lang={lang} />}
     <CustomCursor client:load />
     <SpaceBackground client:load />
 
@@ -54,10 +43,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, "");
       <a href={lang === "es" ? `${base}/` : `${base}/en`} class="font-display text-sm tracking-widest text-ink-secondary transition-colors hover:text-ink-primary">
         &lt;/&gt;
       </a>
-      <div class="flex items-center gap-3">
-        <LangToggle lang={lang} />
-        <ThemeToggle client:load lang={lang} />
-      </div>
+      <LangToggle lang={lang} />
     </header>
 
     <main id="main-content" class="h-[100dvh] w-full overflow-y-auto">

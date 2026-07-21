@@ -1,6 +1,4 @@
 import { useEffect, useRef } from "react";
-import { useStore } from "@nanostores/react";
-import { themeMode } from "@store/themeStore";
 
 interface Star {
   x: number;
@@ -35,38 +33,18 @@ const LAYERS_MOBILE = [
 ];
 
 const PALETTE = {
-  dark: {
-    star: "245, 243, 255",
-    nebulaA: "107, 79, 224",
-    nebulaB: "63, 217, 199",
-    nebulaC: "242, 166, 90",
-    band: "245, 243, 255",
-    auroraA: "63, 217, 199",
-    auroraB: "107, 79, 224",
-    nebulaComposite: "source-over" as GlobalCompositeOperation,
-    nebulaAlpha: [0.16, 0.13, 0.09],
-    auroraComposite: "screen" as GlobalCompositeOperation,
-    auroraAlpha: 0.16,
-    bandAlpha: 0.045,
-  },
-  light: {
-    // Colores más saturados y vívidos que en oscuro, y con más alpha: con "multiply"
-    // sobre un fondo claro, un lavado pálido apenas se nota, hace falta color con cuerpo
-    // (y más presencia) para que se lea igual de bien que en el tema oscuro.
-    // Paleta azul (en vez de roja) para que se asemeje más al espacio incluso en zonas claras.
-    star: "45, 55, 80",
-    nebulaA: "37, 99, 235",
-    nebulaB: "14, 165, 233",
-    nebulaC: "30, 64, 175",
-    band: "90, 100, 140",
-    auroraA: "14, 165, 233",
-    auroraB: "37, 99, 235",
-    nebulaComposite: "multiply" as GlobalCompositeOperation,
-    nebulaAlpha: [0.22, 0.19, 0.16],
-    auroraComposite: "multiply" as GlobalCompositeOperation,
-    auroraAlpha: 0.18,
-    bandAlpha: 0.12,
-  },
+  star: "245, 243, 255",
+  nebulaA: "107, 79, 224",
+  nebulaB: "63, 217, 199",
+  nebulaC: "242, 166, 90",
+  band: "245, 243, 255",
+  auroraA: "63, 217, 199",
+  auroraB: "107, 79, 224",
+  nebulaComposite: "source-over" as GlobalCompositeOperation,
+  nebulaAlpha: [0.16, 0.13, 0.09],
+  auroraComposite: "screen" as GlobalCompositeOperation,
+  auroraAlpha: 0.16,
+  bandAlpha: 0.045,
 } as const;
 
 function randomBetween([min, max]: number[]): number {
@@ -74,7 +52,6 @@ function randomBetween([min, max]: number[]): number {
 }
 
 export default function SpaceBackground() {
-  const mode = useStore(themeMode);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const layersRef = useRef<Star[][]>([]);
   const meteorsRef = useRef<Meteor[]>([]);
@@ -145,7 +122,7 @@ export default function SpaceBackground() {
     nextMeteorAtRef.current = Date.now() + Math.random() * 6000 + 4000;
 
     function draw(time: number) {
-      const palette = PALETTE[mode];
+      const palette = PALETTE;
 
       // Suaviza el movimiento del ratón (inercia) para que el parallax no sea brusco
       smoothMouseRef.current.x += (mouseRef.current.x - smoothMouseRef.current.x) * 0.04;
@@ -284,7 +261,7 @@ export default function SpaceBackground() {
       window.removeEventListener("pointermove", handlePointerMove);
       cancelAnimationFrame(rafRef.current);
     };
-  }, [mode]);
+  }, []);
 
   return (
     <canvas
