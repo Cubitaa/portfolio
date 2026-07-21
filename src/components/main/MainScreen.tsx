@@ -28,6 +28,18 @@ export default function MainScreen({ hero, navItems, panelData, footer, lang }: 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // Refleja el panel abierto en la URL (?open=...) para que LangToggle pueda
+  // preservarlo al cambiar de idioma, en vez de mandar siempre al inicio.
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    if (activeId) {
+      url.searchParams.set("open", activeId);
+    } else {
+      url.searchParams.delete("open");
+    }
+    window.history.replaceState(null, "", url);
+  }, [activeId]);
+
   function handleSelect(id: string, origin: { x: number; y: number }) {
     setZoomOrigin(origin);
     setIsZooming(true);

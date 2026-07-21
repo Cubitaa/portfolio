@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+html {
+  color-scheme: dark;
+}
+
 body {
   margin: 0;
   background: var(--void);
@@ -208,6 +212,7 @@ body {
 .field-checkbox input {
   width: 16px;
   height: 16px;
+  accent-color: var(--cyan);
 }
 
 .field-object,
