@@ -36,6 +36,15 @@ function chunk<T>(items: T[], size: number): T[][] {
   return rows;
 }
 
+// Permite que el campo "badgeImage" del admin sea una ruta simple relativa a
+// public/ (ej. "aws-badges/foo.png") sin que el usuario tenga que acordarse
+// del prefijo /portfolio del sitio, o una URL absoluta (http...) tal cual.
+function resolveBadgeSrc(path: string): string {
+  if (/^https?:\/\//.test(path)) return path;
+  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+  return `${base}/${path.replace(/^\//, "")}`;
+}
+
 function Hex({ item, lang }: { item: AwsCertItem; lang: Lang }) {
   const label = item.name[lang];
   const dimClasses = item.obtained ? "opacity-100" : "opacity-40 grayscale";
@@ -44,7 +53,7 @@ function Hex({ item, lang }: { item: AwsCertItem; lang: Lang }) {
   return (
     <div className="flex w-[130px] flex-col items-center gap-4 sm:w-[150px]">
       {item.badgeImage ? (
-        <img src={item.badgeImage} alt={label} className={`w-full transition-all duration-500 ${dimClasses}`} />
+        <img src={resolveBadgeSrc(item.badgeImage)} alt={label} className={`w-full transition-all duration-500 ${dimClasses}`} />
       ) : (
         <div className={`relative flex aspect-[0.866/1] w-full items-center justify-center transition-all duration-500 ${dimClasses}`}>
           <div
