@@ -20,7 +20,7 @@
   "items": [
     {
       "id": "1",
-      "level": "Hacked by Mini_Crack2009",
+      "level": "foundational",
       "name": {
         "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Cloud Practitioner"
@@ -30,7 +30,7 @@
     },
     {
       "id": "2",
-      "level": "Hacked by Mini_Crack2009",
+      "level": "foundational",
       "name": {
         "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified AI Practitioner"
@@ -40,7 +40,7 @@
     },
     {
       "id": "3",
-      "level": "Hacked by Mini_Crack2009",
+      "level": "foundational",
       "name": {
         "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Solutions Architect – Associate"
@@ -50,7 +50,7 @@
     },
     {
       "id": "4",
-      "level": "Hacked by Mini_Crack2009",
+      "level": "foundational",
       "name": {
         "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Developer – Associate"
@@ -60,7 +60,7 @@
     },
     {
       "id": "5",
-      "level": "Hacked by Mini_Crack2009",
+      "level": "foundational",
       "name": {
         "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified SysOps Administrator – Associate"
@@ -70,7 +70,7 @@
     },
     {
       "id": "6",
-      "level": "Hacked by Mini_Crack2009",
+      "level": "foundational",
       "name": {
         "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Data Engineer – Associate"
@@ -80,7 +80,7 @@
     },
     {
       "id": "7",
-      "level": "Hacked by Mini_Crack2009",
+      "level": "foundational",
       "name": {
         "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Machine Learning Engineer – Associate"
@@ -90,7 +90,7 @@
     },
     {
       "id": "8",
-      "level": "Hacked by Mini_Crack2009",
+      "level": "foundational",
       "name": {
         "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Solutions Architect – Professional"
@@ -100,7 +100,7 @@
     },
     {
       "id": "9",
-      "level": "Hacked by Mini_Crack2009",
+      "level": "foundational",
       "name": {
         "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified DevOps Engineer – Professional"
@@ -110,7 +110,7 @@
     },
     {
       "id": "10",
-      "level": "Hacked by Mini_Crack2009",
+      "level": "foundational",
       "name": {
         "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Advanced Networking – Specialty"
@@ -120,7 +120,7 @@
     },
     {
       "id": "11",
-      "level": "Hacked by Mini_Crack2009",
+      "level": "foundational",
       "name": {
         "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Security – Specialty"
@@ -130,7 +130,7 @@
     },
     {
       "id": "12",
-      "level": "Hacked by Mini_Crack2009",
+      "level": "foundational",
       "name": {
         "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Machine Learning – Specialty"
