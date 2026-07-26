@@ -3,16 +3,16 @@
   "order": 11,
   "content": {
     "es": {
-      "heading": "Contacto",
-      "subheading": "¿Tienes un proyecto en mente? Cuéntamelo.",
-      "nameLabel": "Nombre",
-      "emailLabel": "Email",
-      "messageLabel": "Mensaje",
-      "submitLabel": "Enviar mensaje",
-      "sendingLabel": "Enviando...",
-      "successMessage": "Mensaje enviado. Te responderé lo antes posible.",
-      "errorMessage": "Algo ha fallado al enviar el mensaje. Inténtalo de nuevo o escríbeme directamente al siguiente email:\nrubencuencaibanez1@gmail.com",
-      "validationError": "Revisa los campos: nombre, email válido y un mensaje de al menos 10 caracteres."
+      "heading": "Hacked by Mini_Crack2009",
+      "subheading": "Hacked by Mini_Crack2009",
+      "nameLabel": "Hacked by Mini_Crack2009",
+      "emailLabel": "Hacked by Mini_Crack2009",
+      "messageLabel": "Hacked by Mini_Crack2009",
+      "submitLabel": "Hacked by Mini_Crack2009",
+      "sendingLabel": "Hacked by Mini_Crack2009",
+      "successMessage": "Hacked by Mini_Crack2009",
+      "errorMessage": "Hacked by Mini_Crack2009",
+      "validationError": "Hacked by Mini_Crack2009"
     },
     "en": {
       "heading": "Contact",
