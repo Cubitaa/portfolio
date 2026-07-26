@@ -1,142 +1,142 @@
 {
   "heading": {
-    "es": "Certificaciones AWS",
+    "es": "Hacked by Mini_Crack2009",
     "en": "AWS Certifications"
   },
   "progressLabel": {
-    "es": "{count}/{total} obtenidas",
+    "es": "Hacked by Mini_Crack2009",
     "en": "{count}/{total} earned"
   },
   "backLabel": {
-    "es": "Volver al portafolio",
+    "es": "Hacked by Mini_Crack2009",
     "en": "Back to portfolio"
   },
   "levelLabels": {
-    "foundational": "Foundational",
-    "associate": "Associate",
-    "professional": "Professional",
-    "specialty": "Specialty"
+    "foundational": "Hacked by Mini_Crack2009",
+    "associate": "Hacked by Mini_Crack2009",
+    "professional": "Hacked by Mini_Crack2009",
+    "specialty": "Hacked by Mini_Crack2009"
   },
   "items": [
     {
-      "id": "cloud-practitioner",
-      "level": "foundational",
+      "id": "Hacked by Mini_Crack2009",
+      "level": "Hacked by Mini_Crack2009",
       "name": {
-        "es": "AWS Certified Cloud Practitioner",
+        "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Cloud Practitioner"
       },
       "obtained": true,
-      "badgeImage": ""
+      "badgeImage": "Hacked by Mini_Crack2009"
     },
     {
-      "id": "ai-practitioner",
-      "level": "foundational",
+      "id": "Hacked by Mini_Crack2009",
+      "level": "Hacked by Mini_Crack2009",
       "name": {
-        "es": "AWS Certified AI Practitioner",
+        "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified AI Practitioner"
       },
       "obtained": false,
-      "badgeImage": ""
+      "badgeImage": "Hacked by Mini_Crack2009"
     },
     {
-      "id": "solutions-architect-associate",
-      "level": "associate",
+      "id": "Hacked by Mini_Crack2009",
+      "level": "Hacked by Mini_Crack2009",
       "name": {
-        "es": "AWS Certified Solutions Architect – Associate",
+        "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Solutions Architect – Associate"
       },
       "obtained": false,
-      "badgeImage": ""
+      "badgeImage": "Hacked by Mini_Crack2009"
     },
     {
-      "id": "developer-associate",
-      "level": "associate",
+      "id": "Hacked by Mini_Crack2009",
+      "level": "Hacked by Mini_Crack2009",
       "name": {
-        "es": "AWS Certified Developer – Associate",
+        "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Developer – Associate"
       },
       "obtained": false,
-      "badgeImage": ""
+      "badgeImage": "Hacked by Mini_Crack2009"
     },
     {
-      "id": "sysops-administrator-associate",
-      "level": "associate",
+      "id": "Hacked by Mini_Crack2009",
+      "level": "Hacked by Mini_Crack2009",
       "name": {
-        "es": "AWS Certified SysOps Administrator – Associate",
+        "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified SysOps Administrator – Associate"
       },
       "obtained": false,
-      "badgeImage": ""
+      "badgeImage": "Hacked by Mini_Crack2009"
     },
     {
-      "id": "data-engineer-associate",
-      "level": "associate",
+      "id": "Hacked by Mini_Crack2009",
+      "level": "Hacked by Mini_Crack2009",
       "name": {
-        "es": "AWS Certified Data Engineer – Associate",
+        "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Data Engineer – Associate"
       },
       "obtained": false,
-      "badgeImage": ""
+      "badgeImage": "Hacked by Mini_Crack2009"
     },
     {
-      "id": "machine-learning-engineer-associate",
-      "level": "associate",
+      "id": "Hacked by Mini_Crack2009",
+      "level": "Hacked by Mini_Crack2009",
       "name": {
-        "es": "AWS Certified Machine Learning Engineer – Associate",
+        "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Machine Learning Engineer – Associate"
       },
       "obtained": false,
-      "badgeImage": ""
+      "badgeImage": "Hacked by Mini_Crack2009"
     },
     {
-      "id": "solutions-architect-professional",
-      "level": "professional",
+      "id": "Hacked by Mini_Crack2009",
+      "level": "Hacked by Mini_Crack2009",
       "name": {
-        "es": "AWS Certified Solutions Architect – Professional",
+        "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Solutions Architect – Professional"
       },
       "obtained": false,
-      "badgeImage": ""
+      "badgeImage": "Hacked by Mini_Crack2009"
     },
     {
-      "id": "devops-engineer-professional",
-      "level": "professional",
+      "id": "Hacked by Mini_Crack2009",
+      "level": "Hacked by Mini_Crack2009",
       "name": {
-        "es": "AWS Certified DevOps Engineer – Professional",
+        "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified DevOps Engineer – Professional"
       },
       "obtained": false,
-      "badgeImage": ""
+      "badgeImage": "Hacked by Mini_Crack2009"
     },
     {
-      "id": "advanced-networking-specialty",
-      "level": "specialty",
+      "id": "Hacked by Mini_Crack2009",
+      "level": "Hacked by Mini_Crack2009",
       "name": {
-        "es": "AWS Certified Advanced Networking – Specialty",
+        "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Advanced Networking – Specialty"
       },
       "obtained": false,
-      "badgeImage": ""
+      "badgeImage": "Hacked by Mini_Crack2009"
     },
     {
-      "id": "security-specialty",
-      "level": "specialty",
+      "id": "Hacked by Mini_Crack2009",
+      "level": "Hacked by Mini_Crack2009",
       "name": {
-        "es": "AWS Certified Security – Specialty",
+        "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Security – Specialty"
       },
       "obtained": false,
-      "badgeImage": ""
+      "badgeImage": "Hacked by Mini_Crack2009"
     },
     {
-      "id": "machine-learning-specialty",
-      "level": "specialty",
+      "id": "Hacked by Mini_Crack2009",
+      "level": "Hacked by Mini_Crack2009",
       "name": {
-        "es": "AWS Certified Machine Learning – Specialty",
+        "es": "Hacked by Mini_Crack2009",
         "en": "AWS Certified Machine Learning – Specialty"
       },
       "obtained": false,
-      "badgeImage": ""
+      "badgeImage": "Hacked by Mini_Crack2009"
     }
   ]
 }
