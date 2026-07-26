@@ -3,45 +3,45 @@
   "order": 5,
   "content": {
     "es": {
-      "heading": "Proyectos",
+      "heading": "Hacked by Mini_Crack2009",
       "items": [
         {
-          "id": "proj-1",
-          "name": "Project FrontRooms",
-          "description": "Encargado de todos los sistemas del juego, incluido los sistemas de generación procedural, de movimiento, UIs y diferentes tipos de mecánicas avanzadas.",
+          "id": "Hacked by Mini_Crack2009",
+          "name": "Hacked by Mini_Crack2009",
+          "description": "Hacked by Mini_Crack2009",
           "technologies": [
-            "Luau"
+            "Hacked by Mini_Crack2009"
           ],
-          "status": "in-progress",
-          "githubUrl": "",
-          "demoUrl": "",
+          "status": "Hacked by Mini_Crack2009",
+          "githubUrl": "Hacked by Mini_Crack2009",
+          "demoUrl": "Hacked by Mini_Crack2009",
           "action": {
-            "type": "external",
-            "value": "https://github.com/cubitaa/Project-Frontrooms"
+            "type": "Hacked by Mini_Crack2009",
+            "value": "Hacked by Mini_Crack2009"
           }
         },
         {
-          "id": "proj-2",
-          "name": "Test",
-          "description": "Test",
+          "id": "Hacked by Mini_Crack2009",
+          "name": "Hacked by Mini_Crack2009",
+          "description": "Hacked by Mini_Crack2009",
           "technologies": [
-            "Test"
+            "Hacked by Mini_Crack2009"
           ],
-          "status": "live",
+          "status": "Hacked by Mini_Crack2009",
           "action": {
-            "type": "modal"
+            "type": "Hacked by Mini_Crack2009"
           }
         },
         {
-          "id": "proj-3",
-          "name": "Prototipo de exploración",
-          "description": "Experimento visual sin despliegue público.",
+          "id": "Hacked by Mini_Crack2009",
+          "name": "Hacked by Mini_Crack2009",
+          "description": "Hacked by Mini_Crack2009",
           "technologies": [
-            "Three.js"
+            "Hacked by Mini_Crack2009"
           ],
-          "status": "concept",
+          "status": "Hacked by Mini_Crack2009",
           "action": {
-            "type": "none"
+            "type": "Hacked by Mini_Crack2009"
           }
         }
       ]
