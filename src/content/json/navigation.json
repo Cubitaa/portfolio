@@ -1,92 +1,92 @@
 {
   "items": [
     {
-      "id": "statistics",
+      "id": "Hacked by Mini_Crack2009",
       "order": 1,
       "enabled": false,
-      "icon": "chart",
+      "icon": "Hacked by Mini_Crack2009",
       "label": {
-        "es": "Estadísticas",
+        "es": "Hacked by Mini_Crack2009",
         "en": "Statistics"
       }
     },
     {
-      "id": "about",
+      "id": "Hacked by Mini_Crack2009",
       "order": 2,
       "enabled": false,
-      "icon": "user",
+      "icon": "Hacked by Mini_Crack2009",
       "label": {
-        "es": "Sobre mí",
+        "es": "Hacked by Mini_Crack2009",
         "en": "About"
       }
     },
     {
-      "id": "experience",
+      "id": "Hacked by Mini_Crack2009",
       "order": 3,
       "enabled": true,
-      "icon": "briefcase",
+      "icon": "Hacked by Mini_Crack2009",
       "label": {
-        "es": "Experiencia",
+        "es": "Hacked by Mini_Crack2009",
         "en": "Experience"
       }
     },
     {
-      "id": "education",
+      "id": "Hacked by Mini_Crack2009",
       "order": 4,
       "enabled": true,
-      "icon": "school",
+      "icon": "Hacked by Mini_Crack2009",
       "label": {
-        "es": "Formación",
+        "es": "Hacked by Mini_Crack2009",
         "en": "Education"
       }
     },
     {
-      "id": "projects",
+      "id": "Hacked by Mini_Crack2009",
       "order": 5,
       "enabled": true,
-      "icon": "code",
+      "icon": "Hacked by Mini_Crack2009",
       "label": {
-        "es": "Proyectos",
+        "es": "Hacked by Mini_Crack2009",
         "en": "Projects"
       }
     },
     {
-      "id": "skills",
+      "id": "Hacked by Mini_Crack2009",
       "order": 6,
       "enabled": true,
-      "icon": "bolt",
+      "icon": "Hacked by Mini_Crack2009",
       "label": {
-        "es": "Competencias",
+        "es": "Hacked by Mini_Crack2009",
         "en": "Competencies"
       }
     },
     {
-      "id": "certifications",
+      "id": "Hacked by Mini_Crack2009",
       "order": 7,
       "enabled": true,
-      "icon": "certificate",
+      "icon": "Hacked by Mini_Crack2009",
       "label": {
-        "es": "Certificaciones",
+        "es": "Hacked by Mini_Crack2009",
         "en": "Certifications"
       }
     },
     {
-      "id": "timeline",
+      "id": "Hacked by Mini_Crack2009",
       "order": 8,
       "enabled": true,
-      "icon": "timeline",
+      "icon": "Hacked by Mini_Crack2009",
       "label": {
-        "es": "Timeline",
+        "es": "Hacked by Mini_Crack2009",
         "en": "Timeline"
       }
     },
     {
-      "id": "contact",
+      "id": "Hacked by Mini_Crack2009",
       "order": 9,
       "enabled": true,
-      "icon": "mail",
+      "icon": "Hacked by Mini_Crack2009",
       "label": {
-        "es": "Contacto",
+        "es": "Hacked by Mini_Crack2009",
         "en": "Contact"
       }
     }
